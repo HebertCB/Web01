@@ -1,0 +1,37 @@
+header {
+	font-family: Arial;
+	font-size: 1em;
+	background-color: black;
+	color: white;
+	border-bottom: solid 4px #ffc51b;
+	position: relative;
+	height: 100px;
+}
+
+header .logo img{
+	width: 100px;
+}
+
+.logo{
+	position: absolute;
+	left: 10px;
+	top: 5px;
+}
+.menu{
+	position: absolute;
+	right: 10px;
+	top: 25px;
+}
+
+.menu ul li{
+	display: inline-block;
+	text-align: center;
+	padding: 5px 10px 10px 10px
+}
+
+.menu ul li:hover{
+	transition: all .3s ease;
+	background-color: #ffc51b;
+	color: black;
+	cursor: pointer;
+}

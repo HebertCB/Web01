@@ -1,14 +1,19 @@
-header {
+.menu a{
+	color: white;
+  	text-decoration: none;  	
 	font-family: Arial;
+	padding: 10px 10px 10px 10px;
+}
+
+header{
 	font-size: 1em;
 	background-color: black;
-	color: white;
 	border-bottom: solid 4px #ffc51b;
 	position: relative;
 	height: 100px;
 }
 
-header .logo img{
+header .logo img, footer .copyFooter img{
 	width: 100px;
 }
 
@@ -26,12 +31,95 @@ header .logo img{
 .menu ul li{
 	display: inline-block;
 	text-align: center;
-	padding: 5px 10px 10px 10px
 }
 
-.menu ul li:hover{
+.menu ul a:hover{
 	transition: all .3s ease;
 	background-color: #ffc51b;
 	color: black;
 	cursor: pointer;
+}
+
+/*>>>>> FORMULARIO <<<<<<*/
+
+form{
+	margin: 1em;
+}
+
+fieldset{
+	margin: 0 auto;
+	width: 50%;
+}
+
+input[type=text], textarea{
+	display: block;
+	width: 100%;	
+	border: solid 1px lightgray;
+	padding: 8px 10px;	
+}
+
+input[type=text]:focus, textarea:focus{
+	outline: 0 none;
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	border: solid 1px #ffc51b;	
+}
+
+textarea{
+	height: 100px;
+}
+
+input[type=submit]{
+	padding: 10px;
+	border: 0;
+	background-color: #ffc51b;
+	color: white;
+}
+
+.cell{
+	padding: 10px;
+    box-sizing: border-box;
+}
+
+.cell-2{
+	display: block;
+	padding: 10px;
+}
+
+.row{
+	width: 100%;
+	display: block;
+}
+
+
+@media (min-width: 992px){
+    .cell {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (max-width: 768px){
+    fieldset {
+        width: 100%;
+    }
+}
+
+/*------FIX---------*/
+.row:after {
+    clear: both;
+}
+.row:after, .row:before {
+    display: table;
+    content: " ";
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+/*------------------*/
+
+
+.copyFooter{
+	background-color: black;
+	position: relative;
+	height: 100px;
 }

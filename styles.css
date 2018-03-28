@@ -1,46 +1,195 @@
-.menu a{
-	color: white;
-  	text-decoration: none;  	
-	font-family: Arial;
-	padding: 10px 10px 10px 10px;
+body{
+	font-size: 15px;
+	padding-top: 100px;
+	/*temporal*/
 }
 
-header{
+a{
+	text-decoration: none;
+}
+
+img{
+	max-width: 100%;
+}
+
+p{
+	margin: 0 0 10px;
+}
+
+/* H E A D E R --------------------------------------------------- */
+header{	
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
 	font-size: 1em;
 	background-color: black;
 	border-bottom: solid 4px #ffc51b;
+	display: block;
+}
+
+header .logo{
+	float: left;
+	padding: 16px 0;
+}
+
+.logo img{	
+	max-height: 40px;
+	display: block;	
+	border: 0;
+}
+
+.menu-it{
+	float: right;
+	border-right: 1px solid #eee;
+	border-left: 1px solid #eee;
+	margin-right: -15px;
+}
+
+.lines span{
+	height: 1px;
+	width: 100%;
+	background-color: #fff;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.lines{
+	width: 25px;	
+	height: 18px;
+	display: block;
 	position: relative;
-	height: 100px;
+	margin: 24px auto;
 }
 
-header .logo img, footer .copyFooter img{
-	width: 100px;
+.nav-toggle{
+	border: 0;
+	position: relative;    
+	width: 60px;
+	height: 62px;
+	padding: 0;
+	margin: 0;
+	float: right;
 }
 
-.logo{
-	position: absolute;
-	left: 10px;
-	top: 5px;
-}
-.menu{
-	position: absolute;
-	right: 10px;
-	top: 25px;
+nav ul li a{
+	color: #191b1d;
+	color: white;
+	padding: 5px 15px;   
+	margin-top: 20px;
+	display: block;
 }
 
-.menu ul li{
-	display: inline-block;
-	text-align: center;
-}
-
-.menu ul a:hover{
+nav ul li a:hover{
 	transition: all .3s ease;
 	background-color: #ffc51b;
 	color: black;
-	cursor: pointer;
+	/*font-weight: 700;*/
 }
 
-/*>>>>> FORMULARIO <<<<<<*/
+nav{
+	/*min-height: 62px;*/
+}
+
+nav ul li{
+	float: left;
+	display: block;
+	position: relative;
+}
+
+nav ul{
+	list-style: none;
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+/* E N D --------------------------------------------------------- */
+
+
+/* C O N C I E R T O S ------------------------------------------- */
+.conc{
+	background-color: #0D1C25;
+	padding: 10px;
+	transition: all .3s;
+}
+
+.conc:hover {
+	background: #ffffff;
+}
+
+.conc_fecha p{
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 22px;
+	margin-top: -10px;
+}
+
+.conc_fecha span {
+	display: block;
+	color: #a9a9a9;
+	font-size: 67px;
+	margin-bottom: -15px;
+}
+
+.conc_imagen img{
+	margin-top: 20px;
+}
+
+.conc_nombre {
+	padding: 10px 20px;
+	width: 35%;
+}
+
+.conc_nombre .nombre{
+	font-weight: 700;
+	color: #fff;
+	font-size: 28px;
+	margin: 0;
+}
+
+.conc_lugar {
+	width: 30%;
+}
+
+.conc_lugar .lugar {
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 700;
+	margin-top: 30px;
+	margin-bottom: 0;
+}
+
+.conc_comprar a {
+	color: black;
+	background-color: #ffc51b;
+	margin-top: 25px;
+}
+
+.conc_fecha, .conc_imagen, .conc_comprar{
+	width: 10%;
+	text-align: center;
+	color: #fff;
+}
+
+.conc_fecha, .conc_imagen, .conc_nombre, .conc_lugar, .conc_comprar{
+	float: left;
+}
+
+.btn{
+	padding: 0 28px;
+	height: 55px;
+	line-height: 53px;
+	display: inline-block;
+	border-radius: 0;
+	transition: all .3s ease;
+}
+
+/* E N D --------------------------------------------------------- */
+
+
+/* F O R M U L A R I O ------------------------------------------- */
 
 form{
 	margin: 1em;
@@ -77,7 +226,6 @@ input[type=submit]{
 
 .cell{
 	padding: 10px;
-    box-sizing: border-box;
 }
 
 .cell-2{
@@ -90,30 +238,96 @@ input[type=submit]{
 	display: block;
 }
 
+/* E N D --------------------------------------------------------- */
 
-@media (min-width: 992px){
-    .cell {
-        width: 50%;
-        float: left;
-    }
+
+/*esta de mas creo*/
+@media (max-width: 768px){
+	fieldset {
+		width: 100%;
+	}	
 }
 
-@media (max-width: 768px){
-    fieldset {
-        width: 100%;
-    }
+@media screen and (max-width: 768px){
+	.conc_imagen, .conc_fecha {
+		width: 50%;
+		text-align: center;
+	}
+	.conc_nombre {
+		width: 100%;
+		text-align: center;
+	}
+	.conc_lugar, .conc_comprar{
+		width: 50%;
+		text-align: center;
+	}
+}
+
+@media (min-width: 768px){
+	.container {
+		width: 750px;
+	}
+}
+
+@media (max-width: 991px){
+	nav {
+		position: absolute;
+		top: 62px;
+		left: 0;
+		width: 100%;
+		display: none;
+		height: auto;
+		padding-bottom: 0;
+		overflow: auto;
+		border-top: 1px solid #e7e7e7;
+		border-bottom: 1px solid #e7e7e7;
+		background-color: #fff;
+	}
+	header .logo {
+		padding: 11px 0;
+	}
+	nav ul, nav ul li{
+		float: none;
+	}
+	nav ul li a{
+		color: #191b1d;
+		padding: 15px;
+		margin: 0;
+	}
+	header .container{
+		width: auto;
+	}
+}
+
+@media (min-width: 992px){
+	.cell {
+		width: 50%;
+		float: left;
+	}
+	.nav-toggle {
+		display: none;
+	}
+	.container{
+		width: 970px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px
+	}
 }
 
 /*------FIX---------*/
-.row:after {
-    clear: both;
+.row:after, .container:after, nav:after, .conc:after {
+	clear: both;
 }
-.row:after, .row:before {
-    display: table;
-    content: " ";
+.row:after, .row:before, .container:after, .container:before, nav:after, nav:before, .conc:after, .conc:before {
+	display: table;
+	content: " ";
 }
 *, :after, :before {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 /*------------------*/
 
@@ -122,4 +336,25 @@ input[type=submit]{
 	background-color: black;
 	position: relative;
 	height: 100px;
+	clear: both;
+}
+
+#mision p{
+	text-align: justify;
+}
+
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.title{
+	text-align: center;
+	font-size: 45px;
+	font-weight: 700;
+	margin-bottom: 40px;    
+	margin-top: 20px;
+	font-family: Avenir Next Condensed;
 }
